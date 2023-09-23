@@ -1,0 +1,19 @@
+/* styles/Header.module.css */
+.header {
+    background-color: #0070f3;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top:0;
+    right:0;
+  }
+  
+  .header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+  }
+  

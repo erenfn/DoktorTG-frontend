@@ -1,0 +1,83 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+
+  &Item {
+    padding: 8px 12px; /* Adjust padding for better spacing */
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, font-weight 0.3s; /* Add font-weight transition */
+    border-color: #b7b7b7;
+    margin: 0.1em;
+
+    &:hover {
+      background-color: #f5f5f5;
+      border-color: #000; /* Change border color to black on hover */
+      font-weight: bold; /* Make button bold on hover */
+    }
+
+    &.active {
+      background-color: #1890ff;
+      color: #fff;
+      border-color: #000; /* Change border color to black when active */
+    }
+
+    &.disabled {
+      pointer-events: none;
+      color: #ccc;
+      cursor: not-allowed;
+    }
+
+    &.arrow {
+      font-size: 16px; /* Adjust font size for arrows */
+      padding: 8px 16px; /* Adjust padding for arrows */
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      margin-top: 15px;
+    }
+
+    &.bold-on-hover:hover {
+      font-weight: bold; /* Make the button bold on hover */
+    }
+
+    &.skip {
+      background-color: transparent;
+      border: none;
+      color: #7f7e7e;
+      cursor: pointer;
+      font-size: 28px; 
+      padding: 0.4em;
+
+      &:hover span {
+        display: none
+      }
+
+      &:hover:before {
+        display: inline;
+        font-size: 16px;
+        color: #03abe8;
+        margin: 2px;
+      }
+
+      &.skipForward {
+        &:hover:before {
+          content: '>>';
+        }
+      }
+
+      &.skipBack {
+        &:hover:before {
+          content: '<<';
+        }
+      }
+    }
+  }
+
+  .page-numbers {
+    display: flex;
+    gap: 4px; /* Add space between page number buttons */
+  }
+}
